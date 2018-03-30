@@ -60,6 +60,6 @@ def all_holidays_with_bbq(holiday_hash)
   list = []
   if holiday_hash[0][0].include?("BBQ")
     list << holiday_hash[0][0]
-    list.flatten
+    list.flatten.uniq
   end
 end
