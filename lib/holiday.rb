@@ -54,11 +54,13 @@ def all_supplies_in_holidays(holiday_hash)
 end
 
 def all_holidays_with_bbq(holiday_hash)
+  barbeque_holidays = []
   holiday_hash.collect do |season, hash|
       hash.collect do |holiday, supplies|
         if supplies.include?("BBQ")
-          holiday
+          barbeque_holidays << supplies
         end
       end
     end
+    barbeque_holidays.flatten
   end
