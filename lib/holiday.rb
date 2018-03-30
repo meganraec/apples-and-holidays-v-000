@@ -54,9 +54,8 @@ def all_supplies_in_holidays(holiday_hash)
 end
 
 def all_holidays_with_bbq(holiday_hash)
-  list = []
-  if holiday_hash[0][0].include?("BBQ")
-    list << holiday_hash[0][0]
-    list.flatten.uniq
+  holiday_hash.each do |season, hash|
+    if hash.value?("BBQ")
+      hash.key
   end
 end
