@@ -57,5 +57,6 @@ def all_holidays_with_bbq(holiday_hash)
   holiday_hash.each do |season, hash|
     if hash.value?("BBQ")
       hash.key
+    end
   end
 end
