@@ -58,6 +58,7 @@ def all_holidays_with_bbq(holiday_hash)
     if hash.value?("BBQ")
       hash.each do |holiday, item|
         puts holiday
+      end
     end
   end
 end
