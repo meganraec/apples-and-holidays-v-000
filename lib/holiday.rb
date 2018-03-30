@@ -54,9 +54,9 @@ def all_supplies_in_holidays(holiday_hash)
 end
 
 def all_holidays_with_bbq(holiday_hash)
-  holidays = (holiday_hash.each do |season, hash|
+  holidays = (holiday_hash.collect do |season, hash|
     if hash.value?(["BBQ"])
-      hash.each do |holiday, item|
+      hash.collect do |holiday, item|
         holiday).flatten
       end
     end
