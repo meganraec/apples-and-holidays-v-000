@@ -55,10 +55,10 @@ end
 
 def all_holidays_with_bbq(holiday_hash)
   holiday_hash.collect do |season, hash|
-    if hash.value?.to_s.include?("BBQ")
-      hash.collect do |holiday, item|
-        holiday
+      hash.collect do |holiday, supplies|
+        if supplies.iclude?("BBQ")
+          puts holiday
+        end
       end
     end
   end
-end
